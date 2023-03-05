@@ -19,7 +19,7 @@ public:
 		while (n == true)
 		{
 			cout << "-----------------Menu------------------ " << endl;
-			cout << "Start: s" << endl;
+			cout << "New Game: s" << endl;
 			cout << "Exit : e" << endl;
 
 			char s;

@@ -2,7 +2,7 @@
 #include "rps_game.h"
 using namespace std;
 
-int main ()
+int main(void)
 {
 
 	rps_game game;

@@ -10,13 +10,24 @@ private:
 	int score;
 public:
 	user() { score = 0; }
-	void make_choice()
+	void inc_score() { score++; }
+	int get_score() { return score; }
+	options make_choice()
 	{
 		options o = r;
 		char c;
 		cout << "Please Choose r, p, or s" << endl;
 		cin >> c;
 
-		return;
+		switch (c)
+		{
+		case 'r': break;
+		case 'p': o = p;
+			break;
+		case 's': o = s;
+			break;
+		}
+
+		return o;
 	}
 };
