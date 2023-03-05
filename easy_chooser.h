@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <random>
+#include <time.h>
 #include "chooser.h"
 using namespace std;
 
