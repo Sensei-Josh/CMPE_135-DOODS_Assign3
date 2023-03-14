@@ -4,6 +4,7 @@
 #include "user.h"
 #include "computer.h"
 #include "easy_chooser.h"
+#include "medium_chooser.h"
 using namespace std;
 
 #define round_size 20
@@ -21,7 +22,7 @@ public:
 	}
 	void start()
 	{
-		/* for later assignments
+		
 		char op;
 		cout << "Pleae choose difficulty" << endl;
 		cout << "Easy: e" << endl;
@@ -29,9 +30,7 @@ public:
 		cout << "Hard: h" << endl;
 
 		cin >> op;
-		*/
-
-		chooser* c = new easy_chooser;
+		chooser* c = choose_factory(op);
 		Player2->set_difficulty(c);
 
 		for (int i = 0; i < round_size; i++)
@@ -98,5 +97,14 @@ public:
 			}
 		}
 	}
-	
+	chooser* choose_factory(char s)
+	{
+		switch (s)
+		{
+		case 'e': return new easy_chooser;
+		case 'm': return new medium_chooser;
+		case 'h':
+		default: return new easy_chooser;
+		}
+	}
 };
