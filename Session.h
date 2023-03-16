@@ -35,8 +35,9 @@ public:
 
 		for (int i = 0; i < round_size; i++)
 		{
+			cout << "Round " << i + 1 << endl;
 			options comp_choice = Player2->get_choice();
-			scorer(Player1->make_choice(), comp_choice);
+			scorer(Player1->get_choice(), comp_choice);
 			cout << "Computer chose: " ;
 			switch (comp_choice)
 			{
