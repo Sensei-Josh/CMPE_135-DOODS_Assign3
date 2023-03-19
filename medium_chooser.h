@@ -8,15 +8,14 @@
 #include "chooser.h"
 using namespace std;
 
-#define N_val	5
+#define N_val 5
 
 class medium_chooser : public chooser
 {
-	//idea: make hash map variable
+	//idea: make hash map variable for quick lookup
 	// key = sequence, value = frequency
 	//have a text file holding data
 	//when user chooses medium load data onto hash map
-	//idea: make a pointer to a options vector thats in session
 private:
 	map<string, int> data;
 	vector<options> sequence;
@@ -86,7 +85,7 @@ private:
 
 		//cout << data.size() << endl;
 
-		save << 5 << endl;
+		save << N_val << endl;
 
 		for (auto it = data.begin(); it != data.end(); ++it)
 		{
@@ -134,7 +133,7 @@ public:
 			seq = get_seq();
 			int freq = 0;
 
-			cout << sequence.size() << endl;
+			//cout << sequence.size() << endl;
 
 			auto it = data.find(seq + "r");
 			freq = it->second;
