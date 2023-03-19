@@ -14,56 +14,7 @@ class Session
 private:
 	user *Player1;
 	computer *Player2;
-public:
-	Session()
-	{
-		Player1 = new user;
-		Player2 = new computer;
-	}
-	void start()
-	{
-		
-		char op;
-		cout << "Pleae choose difficulty" << endl;
-		cout << "Easy: e" << endl;
-		cout << "Medium: m" << endl;
-		cout << "Hard: h" << endl;
 
-		cin >> op;
-		chooser* c = choose_factory(op);
-		Player2->set_difficulty(c);
-
-		for (int i = 0; i < round_size; i++)
-		{
-			cout << "Round " << i + 1 << endl;
-			options comp_choice = Player2->get_choice();
-			scorer(Player1->get_choice(), comp_choice);
-			cout << "Computer chose: " ;
-			switch (comp_choice)
-			{
-			case r: cout << "r" << endl;
-				break;
-			case p: cout << "p" << endl;
-				break;
-			case s: cout << "s" << endl;
-			}
-		}
-
-		cout << "User: " << Player1->get_score() << " Computer: " << Player2->get_score() << endl;
-
-		if (Player1->get_score() > Player2->get_score())
-		{
-			cout << "You win!!!!!!" << endl;
-		}
-		else if (Player1->get_score() < Player2->get_score())
-		{
-			cout << "Awww you lost, try your luck next time." << endl;
-		}
-		else
-		{
-			cout << "Tie" << endl;
-		}
-	}
 	void scorer(options o1, options o2)
 	{
 		if (o1 == r)
@@ -80,7 +31,7 @@ public:
 		{
 			switch (o2)
 			{
-			case r: Player1->inc_score(); 
+			case r: Player1->inc_score();
 				break;
 			case p: break;
 			case s: Player2->inc_score();
@@ -107,5 +58,59 @@ public:
 		case 'h':
 		default: return new easy_chooser;
 		}
+	}
+public:
+	Session()
+	{
+		Player1 = new user;
+		Player2 = new computer;
+	}
+	void start()
+	{
+		
+		char op;
+		cout << "Please choose difficulty" << endl;
+		cout << "Easy: e" << endl;
+		cout << "Medium: m" << endl;
+		cout << "Hard: h" << endl;
+
+		cin >> op;
+		chooser* c = choose_factory(op);
+		Player2->set_difficulty(c);
+
+		for (int i = 0; i < round_size; i++)
+		{
+			cout << "Round " << i + 1 << endl;
+			options player_choice = Player1->get_choice();
+			options comp_choice = Player2->get_choice(player_choice);
+
+			scorer(player_choice, comp_choice);
+			cout << "Computer chose: " ;
+			switch (comp_choice)
+			{
+			case r: cout << "r" << endl;
+				break;
+			case p: cout << "p" << endl;
+				break;
+			case s: cout << "s" << endl;
+			}
+		}
+
+		cout << "User: " << Player1->get_score() << " Computer: " << Player2->get_score() << endl;
+
+		if (Player1->get_score() > Player2->get_score())
+		{
+			cout << "You win!!!!!!" << endl;
+		}
+		else if (Player1->get_score() < Player2->get_score())
+		{
+			cout << "Awww you lost, try your luck next time." << endl;
+		}
+		else
+		{
+			cout << "Tie" << endl;
+		}
+		
+		return;
 	}
 };

@@ -18,5 +18,5 @@ public:
 	}
 	void inc_score() { score++; }
 	int get_score() { return score; }
-	options get_choice() { return method->make_choice(); }
+	options get_choice(options choice = r) { return method->make_choice(choice); }
 };

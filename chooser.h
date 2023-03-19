@@ -8,5 +8,5 @@ enum options { r,p,s };
 class chooser
 {
 public:
-	virtual options make_choice() = 0;
+	virtual options make_choice(options player) = 0;
 };

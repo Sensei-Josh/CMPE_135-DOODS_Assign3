@@ -1,0 +1,6 @@
+5
+36 rprpr
+4 spsps
+4 spsrs
+2 srsps
+26 srsrs

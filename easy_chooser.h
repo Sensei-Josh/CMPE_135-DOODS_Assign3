@@ -10,7 +10,7 @@ class easy_chooser : public chooser
 {
 public:
 	easy_chooser() {};
-	options make_choice ()
+	options make_choice (options player)
 	{
 		srand(time(0));
 		int option = rand() % 3 + 1;

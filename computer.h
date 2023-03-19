@@ -18,5 +18,5 @@ public:
 	void inc_score() { score++; }
 	int get_score() { return score; }
 	void set_difficulty(chooser *c){ difficulty = c; }
-	options get_choice() { return difficulty->make_choice(); }
+	options get_choice(options player) { return difficulty->make_choice(player); }
 };
