@@ -13,15 +13,7 @@ public:
 	options make_choice (options player)
 	{
 		srand(time(0));
-		int option = rand() % 3 + 1;
-
-		switch (option)
-		{
-		case 1: return r;
-		case 2: return p;
-		case 3: return s;
-		}
-
-		return r;
+		int x = enum_elem;
+		return static_cast<options>(rand() % x);
 	}
 };

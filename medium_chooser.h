@@ -23,9 +23,8 @@ private:
 	void update_data(string seq)
 	{
 		int x = N_val;
-		if (sequence[x - 1] == r) seq += "r";
-		else if (sequence[x - 1] == s) seq += "s";
-		else seq += "p";
+
+		seq += OpToString(sequence[x - 1]);
 
 		auto it = data.find(seq);
 
@@ -105,7 +104,8 @@ public:
 	options make_choice(options player)
 	{
 		int max_size = N_val;
-		options o = p;
+		int enum_total = enum_elem;
+		options o = static_cast<options>(rand() % enum_total);
 		string seq;
 
 		if ((sequence.size() < max_size-1))
@@ -135,20 +135,16 @@ public:
 
 			//cout << sequence.size() << endl;
 
-			auto it = data.find(seq + "r");
-			freq = it->second;
+			auto it = data.find(seq);
 
-			it = data.find(seq + "s");
-			if (freq < it->second)
+			for (int i = r; i <= s; i++)
 			{
-				o = r;
-				freq = it->second;
-			}
-
-			it = data.find(seq + "p");
-			if (freq < it->second)
-			{
-				o = s;
+				it = data.find(seq + OpToString(static_cast<options>(i)));
+				if (freq < it->second)
+				{
+					o = static_cast<options>((i + 1) % (s + 1));
+					freq = it->second;
+				}
 			}
 
 			sequence.push_back(player);

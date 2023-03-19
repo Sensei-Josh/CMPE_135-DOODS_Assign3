@@ -1,2 +1,17 @@
 5
-18 rprpr
+5 ppppp
+2 ppprp
+4 pppsp
+32 prprp
+2 psppp
+27 pspsp
+29 rprpr
+8 rprrr
+5 rrrpr
+15 rrrrr
+1 rsrrr
+1 rsrsr
+1 sprpr
+2 spsps
+2 spsrs
+31 srsrs
