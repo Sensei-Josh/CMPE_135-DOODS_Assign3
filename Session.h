@@ -49,7 +49,7 @@ private:
 			}
 		}
 	}
-	chooser* choose_factory(char s)
+	static chooser* choose_factory(char s)
 	{
 		switch (s)
 		{
