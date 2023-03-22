@@ -108,6 +108,8 @@ public:
 		options o = static_cast<options>(rand() % enum_total);
 		string seq;
 
+		//cout << OpToString(player) << endl;
+
 		if ((sequence.size() < max_size-1))
 		{
 			sequence.push_back(player);

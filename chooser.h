@@ -14,6 +14,13 @@ string OpToString(options op)
 	else return "p";
 }
 
+options CharToOp(char op)
+{
+	if (op == 'r') return r;
+	else if (op == 's') return s;
+	else return p;
+}
+
 class chooser
 {
 public:

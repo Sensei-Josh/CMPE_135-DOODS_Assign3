@@ -14,7 +14,7 @@ public:
 		cout << "Please Choose r, p, or s" << endl;
 		cin >> c;
 
-		o = static_cast<options>(c);
+		o = CharToOp(c);
 
 		return o;
 	}
