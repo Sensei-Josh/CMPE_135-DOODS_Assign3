@@ -14,9 +14,9 @@
 1 rsrpr
 1 rsrrr
 2 rsrsr
-2 spsps
-3 spsrs
+3 spsps
+4 spsrs
 1 spsss
 2 srsps
-9 srsrs
+25 srsrs
 1 sssps

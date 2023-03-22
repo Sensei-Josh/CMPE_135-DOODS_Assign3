@@ -1,0 +1,97 @@
+Welcome to Rock-Paper-Scissors and online game to waste your time.
+-----------------Menu------------------
+New Game: s
+Exit : e
+s
+Please choose difficulty
+Easy: e
+Medium: m
+Hard: h
+m
+Round 1
+Please Choose r, p, or s
+s
+Computer chose: p
+Round 2
+Please Choose r, p, or s
+s
+Computer chose: p
+Round 3
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 4
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 5
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 6
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 7
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 8
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 9
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 10
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 11
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 12
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 13
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 14
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 15
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 16
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 17
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 18
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 19
+Please Choose r, p, or s
+s
+Computer chose: r
+Round 20
+Please Choose r, p, or s
+s
+Computer chose: r
+User: 2 Computer: 18
+Awww you lost, try your luck next time.
+-----------------Menu------------------
+New Game: s
+Exit : e
+e
+Goodbye for now
