@@ -14,14 +14,7 @@ public:
 		cout << "Please Choose r, p, or s" << endl;
 		cin >> c;
 
-		switch (c)
-		{
-		case 'r': break;
-		case 'p': o = p;
-			break;
-		case 's': o = s;
-			break;
-		}
+		o = static_cast<options>(c);
 
 		return o;
 	}
