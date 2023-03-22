@@ -5,11 +5,12 @@
 32 prprp
 2 psppp
 27 pspsp
-45 rprpr
+60 rprpr
 8 rprrr
-6 rrrpr
+1 rprsr
+7 rrrpr
 15 rrrrr
-2 rsrrr
+3 rsrrr
 1 rsrsr
 1 sprpr
 2 spsps

@@ -15,39 +15,11 @@ private:
 	user *Player1;
 	computer *Player2;
 
-	void scorer(options o1, options o2)
+	void scorer(int o1, int o2)
 	{
-		if (o1 == r)
-		{
-			switch (o2)
-			{
-			case r: break;
-			case p: Player2->inc_score();
-				break;
-			case s: Player1->inc_score();
-			}
-		}
-		else if (o1 == p)
-		{
-			switch (o2)
-			{
-			case r: Player1->inc_score();
-				break;
-			case p: break;
-			case s: Player2->inc_score();
-			}
-		}
-		else if (o1 == s)
-		{
-			switch (o2)
-			{
-			case r: Player2->inc_score();
-				break;
-			case p: Player2->inc_score();
-				break;
-			case s: break;
-			}
-		}
+		if (o1 == o2) return;
+		else if (o2 == ((o1 + 1) % 3)) Player2->inc_score();
+		else Player1->inc_score();
 	}
 	static chooser* choose_factory(char s)
 	{
@@ -55,7 +27,7 @@ private:
 		{
 		case 'e': return new easy_chooser;
 		case 'm': return new medium_chooser;
-		case 'h':
+		case 'h': return new easy_chooser; // make an impossible class
 		default: return new easy_chooser;
 		}
 	}
